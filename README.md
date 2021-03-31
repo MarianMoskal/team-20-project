@@ -1,4 +1,4 @@
-# parcel-project-template
+# team-20-project
 
 ## Зависимости
 
