@@ -1,0 +1,38 @@
+.logo {
+  color: rgba(17, 21, 24, 1);
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 32px;
+
+  height: 45px;
+  width: 128px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.15) translateX(10px);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__icon {
+    background-color: rgba(255, 107, 9, 1);
+    align-self: center;
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+
+  &__text {
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  &__part-text {
+    color: rgba(255, 107, 9, 1);
+  }
+}
