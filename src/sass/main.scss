@@ -6,6 +6,7 @@
 // Стили для файла с примером HTML-фрагмента
 @import './base/normalize';
 @import './base/defaults';
+@import './utils/variables';
 @import './components/header';
 @import './components/hero';
 @import './components/advantages';
@@ -18,6 +19,8 @@
 @import './components/reviews';
 @import './components/contacts';
 @import './components/footer';
+@import './shared/logo';
+@import './shared/buttons';
 
 // Header
 // Hero

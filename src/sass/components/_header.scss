@@ -1,3 +1,128 @@
-.a {
-  background-color: green;
+// 1. поміняти кольори на перемінні
+// 2. добавити іконку в лого
+// 3. додати іконку мобільного меню
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+
+  margin-top: 30.5px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 40px;
+    justify-content: flex-end;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 27px;
+    justify-content: flex-end;
+  }
+}
+
+.page-header__container > .logo {
+  @media screen and (max-width: 768px) {
+    transform: scale(0.63);
+    margin-left: -20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: auto;
+    margin-left: 0px;
+  }
+
+  &:hover,
+  &:focus {
+    @media screen and (max-width: 768px) {
+      transform: scale(0.7);
+    }
+  }
+}
+
+.navigation-list {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+
+    &__item {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+
+      color: rgba(185, 185, 185, 1);
+
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+
+    &__link:hover,
+    &__link:focus {
+      color: rgba(255, 107, 9, 1);
+    }
+  }
+}
+
+.call {
+  display: none;
+
+  @media screen and(min-width: 768px) {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: rgba(255, 107, 9, 1);
+    border: 2px solid rgba(255, 107, 9, 1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    height: 48px;
+
+    margin-right: 40px;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.14em;
+
+    margin-left: 60px;
+    margin-right: 0px;
+    width: 336px;
+    height: 70px;
+  }
+}
+
+.menu-toggle {
+  display: block;
+  margin-left: auto;
+  align-items: center;
+  background-color: black;
+
+  @media screen and(min-width: 768px) {
+    margin-left: 0px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    display: none;
+  }
+}
+
+.menu-toggle:focus,
+.menu-toggle:hover {
+  fill: rgba(255, 107, 9, 1);
+  outline: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-toggle > .menu-toggle__icon:focus,
+.menu-toggle > .menu-toggle__icon:hover {
+  fill: rgba(255, 107, 9, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
