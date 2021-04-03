@@ -1,3 +1,149 @@
-.d {
-  background-color: red;
+.problems {
+  position: relative;
+
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background: linear-gradient(
+    to bottom,
+    $main-black 0%,
+    $main-black 78%,
+    $full-white 78%,
+    $full-white 100%
+  );
+
+  @include for-size(min-tablet) {
+    background: linear-gradient(
+      to bottom,
+      $main-black 0%,
+      $main-black 70%,
+      $full-white 70%,
+      $full-white 100%
+    );
+  }
+
+  @include for-size(desktop) {
+    padding-top: 100px;
+    padding-bottom: 130px;
+
+    background: linear-gradient(
+      to bottom,
+      $main-black 0%,
+      $main-black 65%,
+      $full-white 65%,
+      $full-white 100%
+    );
+    z-index: -2;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 455px;
+      height: 472px;
+      bottom: 35%;
+      right: -50px;
+      background: url('./../images/problems/fire.svg') no-repeat;
+      z-index: -1;
+    }
+  }
+}
+
+.problems__header {
+  color: $full-white;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 136%;
+  margin-bottom: 27px;
+  letter-spacing: 0.03em;
+
+  @include for-size(min-tablet) {
+    font-size: 26px;
+    line-height: 130%;
+    margin-bottom: 25px;
+  }
+  @include for-size(desktop) {
+    font-size: 46px;
+    line-height: 130%;
+    margin-bottom: 70px;
+  }
+}
+.problems__accent {
+  color: $main-orange;
+}
+
+.problems__hyphenation {
+  display: block;
+}
+
+.problems__hyphenation--tablet-up {
+  @include for-size(min-tablet) {
+    display: inline;
+  }
+}
+.problems__list-container {
+  background-color: $full-white;
+  padding: 20px 30px;
+  box-shadow: $box-shadow;
+  @include for-size(min-tablet) {
+    padding: 30px 96px;
+  }
+  @include for-size(desktop) {
+    padding: 70px 113px;
+  }
+}
+
+.problems__list {
+  counter-reset: cnt;
+  list-style-type: none;
+  margin: 0;
+
+  @include for-size(min-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: -22px;
+    margin-top: -24px;
+  }
+
+  @include for-size(desktop) {
+    margin-left: -40px;
+    margin-top: -32px;
+  }
+}
+
+.problems__item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.49;
+  letter-spacing: 0.08em;
+  color: $main-black;
+
+  @include for-size(min-tablet) {
+    flex-basis: calc(100% / 2 - 22px);
+    margin-left: 22px;
+    margin-top: 24px;
+  }
+
+  @include for-size(desktop) {
+    flex-basis: calc(100% / 3 - 40px);
+    margin-left: 40px;
+    margin-top: 32px;
+    font-size: 20px;
+  }
+
+  &:not(:last-child) {
+    @include for-size(max-tablet) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &::before {
+    counter-increment: cnt;
+    content: '— ' counter(cnt, decimal-leading-zero) ' ';
+    display: flex;
+    flex-direction: column;
+    color: $main-orange;
+    margin-bottom: 5px;
+    line-height: 175%;
+  }
 }
