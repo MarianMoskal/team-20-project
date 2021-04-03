@@ -5,9 +5,9 @@
 
 // Стили для файла с примером HTML-фрагмента
 @import './base/normalize';
-@import './base/defaults';
 @import './utils/variables';
 @import './utils/mixins';
+@import './base/defaults';
 @import './shared/logo';
 @import './shared/buttons';
 @import './components/header';
