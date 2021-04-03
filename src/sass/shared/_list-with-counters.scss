@@ -1,0 +1,67 @@
+.list-with-counter__container {
+  background-color: $full-white;
+  padding: 20px 30px;
+  box-shadow: $box-shadow;
+  @include for-size(min-tablet) {
+    padding: 30px 96px;
+  }
+  @include for-size(desktop) {
+    padding: 70px 113px;
+  }
+}
+
+.list-with-counter {
+  counter-reset: cnt;
+  list-style-type: none;
+  margin: 0;
+
+  @include for-size(min-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: -22px;
+    margin-top: -24px;
+  }
+
+  @include for-size(desktop) {
+    margin-left: -40px;
+    margin-top: -32px;
+  }
+}
+
+.list-with-counter__item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.49;
+  letter-spacing: 0.08em;
+  color: $main-black;
+
+  @include for-size(min-tablet) {
+    flex-basis: calc(100% / 2 - 22px);
+    margin-left: 22px;
+    margin-top: 24px;
+  }
+
+  @include for-size(desktop) {
+    flex-basis: calc(100% / 3 - 40px);
+    margin-left: 40px;
+    margin-top: 32px;
+    font-size: 20px;
+  }
+
+  &:not(:last-child) {
+    @include for-size(max-tablet) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &::before {
+    counter-increment: cnt;
+    content: '— ' counter(cnt, decimal-leading-zero) ' ';
+    display: flex;
+    flex-direction: column;
+    color: $main-orange;
+    margin-bottom: 5px;
+    line-height: 175%;
+  }
+}

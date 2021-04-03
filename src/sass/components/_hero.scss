@@ -1,3 +1,67 @@
-.b {
-  background-color: blue;
+.hero {
+  max-width: 480px;
+  padding-top: 59.6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 47px;
+  box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
+  background-image: url(../images/vector.jpg);
+  background-size: 100% 110%;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/vectorx2.jpg);
+  }
+}
+
+.hero__name {
+  margin-bottom: 30px;
+
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.36;
+  letter-spacing: 0.03em;
+}
+
+.hero__description {
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 1.571;
+  letter-spacing: 0.08em;
+}
+
+.hero__description--gray {
+  color: $main-grey;
+}
+
+.hero__description--bolt {
+  font-weight: 700;
+}
+
+.hero__description--orange {
+  color: $main-orange;
+}
+
+.hero__container {
+  text-align: center;
+}
+
+.hero__btn {
+  display: inline-block;
+  margin-bottom: 30px;
+  background-color: $main-orange;
+  padding: 14px 10px;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  color: $full-white;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.hero__img {
+  margin-left: auto;
+  margin-right: auto;
 }

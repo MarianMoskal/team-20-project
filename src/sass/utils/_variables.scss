@@ -16,3 +16,8 @@ $desktop-screen: 1280px;                                //desktop resolution
 
 $transition-time: 250ms;                                //transition time
 $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);            //cubic-bezier
+
+$min-pixel-ratio: 2;                                    //min device pixel ratio
+$min-resolution-dpi: 192dpi;                            //min resolution (dpi)
+$min-resolution-dppx: 2dppx;                            //min resolution (dppx)
+
