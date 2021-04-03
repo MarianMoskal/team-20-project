@@ -1,0 +1,31 @@
+// міксин для медіа
+
+@mixin for-size($size) {
+  @if $size == min-mobile {
+    @media (min-width: $min-mobile-screen) {
+      @content;
+    }
+  } @else if $size == max-mobile {
+    @media (max-width: $max-mobile-screen) {
+      @content;
+    }
+  } @else if $size == min-tablet {
+    @media (min-width: $min-tablet-screen) {
+      @content;
+    }
+  } @else if $size == max-tablet {
+    @media (max-width: $max-tablet-screen) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media (min-width: $desktop-screen) {
+      @content;
+    }
+  }
+}
+
+// міксин для transition
+
+@mixin transition($type) {
+  transition: $type $transition-time $cubic-bezier;
+}
