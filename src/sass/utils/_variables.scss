@@ -1,15 +1,18 @@
-$main-orange: rgba(255, 107, 9, 1);                     //all orange color
-$main-black: rgba(17, 21, 24, 1);                       //all black color beside flame and text in warranty
-$main-grey: rgba(185, 185, 185, 1);                     //all grey color
-$full-white: rgba(255, 255, 255, 1);                    //white color
-$secondary-black-color: rgba(61, 61, 61, 1);            //flames in problems section and text in warranty colors
-$guarantee-bg: rgba(241, 241, 241, 1);                  //guarantee background color
+$main-orange: rgba(255, 107, 9, 1); //all orange color
+$main-black: rgba(17, 21, 24, 1); //all black color beside flame and text in warranty
+$main-grey: rgba(185, 185, 185, 1); //all grey color
+$full-white: rgba(255, 255, 255, 1); //white color
+$secondary-black-color: rgba(
+  61,
+  61,
+  61,
+  1
+); //flames in problems section and text in warranty colors
+$guarantee-bg: rgba(241, 241, 241, 1); //guarantee background color
 
-$box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);         //box-shadow in problems and benefits
-$box-shadow-cards: 0px 8px 26px rgba(0, 0, 0, 0.1);     //box-shadow in how we do cards
+$box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04); //box-shadow in problems and benefits
+$box-shadow-cards: 0px 8px 26px rgba(0, 0, 0, 0.1); //box-shadow in how we do cards
 
-$mobile-screen: 480px;                                    //mobile resolution   
-$tablet-screen: 768px;                                    //tablet resolution
-$desktop-screen: 1280px;                                  //desktop resolution
-
-
+$mobile-screen: 480px; //mobile resolution
+$tablet-screen: 768px; //tablet resolution
+$desktop-screen: 1280px; //desktop resolution

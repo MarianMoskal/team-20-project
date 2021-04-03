@@ -15,7 +15,54 @@
   <link rel="stylesheet" href="/src.e31bb0bc.css"></head>
   <body>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <p class="a">1</p>
+    <header class="page-header">
+    <div class="container page-header__container">
+
+        <a class="logo">Hell
+
+            <svg class="logo__icon" width="22px" height="30px">
+                <use href="#"></use>
+            </svg>
+            EN 
+            <p class="logo__text">
+                <span class="logo__part-text">Адский </span>
+                английский
+            </p>
+        </a>
+
+        <nav class="navigation">
+
+            <ul class="navigation-list">
+
+                <li class="navigation-list__item">
+                    <a class="navigation-list__link">Программы обучения</a>
+                </li>
+
+                <li class="navigation-list__item">
+                    <a class="navigation-list__link">О нас</a>
+                </li>
+
+                <li class="navigation-list__item">
+                    <a class="navigation-list__link">Варианты обучения</a>
+                </li>
+
+                <li class="navigation-list__item">
+                    <a class="navigation-list__link">Контакты</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <a class="call" href="tel:+380960000111">Консультация по телефону</a>
+
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="menu-toggle__icon" width="20.5" height="12">
+                <use href="#"></use>
+            </svg>
+        </button>
+
+    </div>
+</header>
     <p class="b">2</p>
     <p class="c">3</p>
     <section class="problems">
@@ -29,15 +76,17 @@
       <span class="problems__hyphenation problems__hyphenation--tablet-up"></span> которые<span class="problems__hyphenation"></span>
       мы <span class="problems__accent">помогаем</span> решить
     </h2>
-    <ol class="problems__list">
-      <li class="problems__item">Название грамматики</li>
 
-      <li class="problems__item">Неумение вомпринимать устную английскую речь</li>
-      <li class="problems__item">Скупой словарный запас для написани сочинения</li>
-      <li class="problems__item">Поодготовка в одиночку</li>
-      <li class="problems__item">Отсутствие единого ресурса знаний</li>
-      <li class="problems__item">Недостатой самоорганизации и лень</li>
-    </ol>
+    <div class="problems__list-container">
+      <ol class="problems__list">
+        <li class="problems__item">Название грамматики</li>
+        <li class="problems__item">Неумение вомпринимать устную английскую речь</li>
+        <li class="problems__item">Скупой словарный запас для написани сочинения</li>
+        <li class="problems__item">Поодготовка в одиночку</li>
+        <li class="problems__item">Отсутствие единого ресурса знаний</li>
+        <li class="problems__item">Недостатой самоорганизации и лень</li>
+      </ol>
+    </div>
   </div>
 </section>
 

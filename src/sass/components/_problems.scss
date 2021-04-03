@@ -1,46 +1,87 @@
 .container--problems {
   padding-left: 20px;
   padding-right: 20px;
+
+  @media screen and (min-width: $tablet-screen) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media screen and (min-width: $desktop-screen) {
+    padding-left: 183px;
+    padding-right: 183px;
+  }
 }
 
 .problems {
   position: relative;
-  //width: 320px;
+
   height: 100%;
-  margin: 0 auto;
   padding-top: 50px;
-  margin-bottom: 50px;
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  padding-bottom: 50px;
+
+  background: linear-gradient(
+    to bottom,
+    $main-black 0%,
+    $main-black 78%,
+    $full-white 78%,
+    $full-white 100%
+  );
+
+  @media screen and (min-width: $tablet-screen) {
     background: linear-gradient(
-      180deg,
-      rgb(0, 0, 0) 0%,
-      rgb(0, 0, 0) 77%,
-      rgb(255, 255, 255) 77%,
-      rgb(255, 255, 255) 100%
+      to bottom,
+      $main-black 0%,
+      $main-black 70%,
+      $full-white 70%,
+      $full-white 100%
     );
   }
+  @media screen and (min-width: $desktop-screen) {
+    padding-top: 100px;
+    padding-bottom: 130px;
+
+    background: linear-gradient(
+      to bottom,
+      $main-black 0%,
+      $main-black 65%,
+      $full-white 65%,
+      $full-white 100%
+    );
+    z-index: -2;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 455px;
+      height: 472px;
+      bottom: 35%;
+      right: -50px;
+      background: url('./../images/problems/fire.svg') no-repeat;
+      z-index: -1;
+    }
+  }
 }
+
 .problems__header {
-  color: white;
-  font-family: Montserrat;
-  font-style: normal;
+  color: $full-white;
   font-weight: 800;
   font-size: 20px;
   line-height: 136%;
   margin-bottom: 27px;
-  /* or 27px */
-
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: $tablet-screen) {
+    font-size: 26px;
+    line-height: 130%;
+    margin-bottom: 25px;
+  }
+  @media screen and (min-width: $desktop-screen) {
+    font-size: 46px;
+    line-height: 130%;
+    margin-bottom: 70px;
+  }
 }
 .problems__accent {
-  color: #ff6b09;
+  color: $main-orange;
 }
 
 .problems__hyphenation {
@@ -48,29 +89,64 @@
 }
 
 .problems__hyphenation--tablet-up {
-  display: inline;
+  @media screen and (min-width: $tablet-screen) {
+    display: inline;
+  }
+}
+.problems__list-container {
+  background-color: $full-white;
+  padding: 20px 30px;
+  box-shadow: $box-shadow;
+  @media screen and (min-width: $tablet-screen) {
+    padding: 30px 96px;
+  }
+  @media screen and (min-width: $desktop-screen) {
+    padding: 70px 113px;
+  }
 }
 
 .problems__list {
   counter-reset: cnt;
   list-style-type: none;
-  padding: 20px 30px;
   margin: 0;
-  background-color: white;
-  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+
+  @media screen and (min-width: $tablet-screen) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: -22px;
+    margin-top: -24px;
+  }
+  @media screen and (min-width: $desktop-screen) {
+    margin-left: -40px;
+    margin-top: -32px;
+  }
 }
 
 .problems__item {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.49;
   letter-spacing: 0.08em;
-  color: #111518;
+  color: $main-black;
+
+  @media screen and (min-width: $tablet-screen) {
+    flex-basis: calc(100% / 2 - 22px);
+    margin-left: 22px;
+    margin-top: 24px;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    flex-basis: calc(100% / 3 - 40px);
+    margin-left: 40px;
+    margin-top: 32px;
+    font-size: 20px;
+  }
 
   &:not(:last-child) {
-    margin-bottom: 10px;
+    @media screen and (max-width: $tablet-screen) {
+      margin-bottom: 10px;
+    }
   }
 
   &::before {
@@ -78,7 +154,8 @@
     content: '— ' counter(cnt, decimal-leading-zero) ' ';
     display: flex;
     flex-direction: column;
-    color: #ff6b09;
+    color: $main-orange;
     margin-bottom: 5px;
+    line-height: 175%;
   }
 }
