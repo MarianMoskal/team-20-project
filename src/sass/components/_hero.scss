@@ -1,5 +1,5 @@
 .hero {
-  max-width: 480px;
+  max-width: $min-mobile-screen;
   padding-top: 59.6px;
   padding-left: 20px;
   padding-right: 20px;
@@ -11,6 +11,18 @@
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url(../images/vectorx2.jpg);
   }
+
+  @include for-size(min-tablet) {
+    max-width: $min-tablet-screen;
+    background-image: url(../images/tabletvector.jpg);
+    display: flex;
+    padding-left: 42px;
+    padding-right: 18.25px;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/tabletvectorx2.jpg);
+    }
+  }
 }
 
 .hero__name {
@@ -20,6 +32,16 @@
   font-size: 20px;
   line-height: 1.36;
   letter-spacing: 0.03em;
+
+  @include for-size(min-tablet) {
+    font-size: 26px;
+  }
+}
+
+.hero__container--small {
+  @include for-size(min-tablet) {
+    max-width: 276px;
+  }
 }
 
 .hero__description {
@@ -44,6 +66,10 @@
 
 .hero__container {
   text-align: center;
+
+  @include for-size(min-tablet) {
+    text-align: left;
+  }
 }
 
 .hero__btn {
@@ -59,9 +85,19 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: pointer;
+
+  @include for-size(min-tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .hero__img {
   margin-left: auto;
   margin-right: auto;
+
+  @include for-size(min-tablet) {
+    margin-left: 59px;
+    width: 375.75px;
+    margin-top: 20px;
+  }
 }
