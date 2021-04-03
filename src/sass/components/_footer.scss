@@ -1,3 +1,15 @@
 .l {
   background-color: tomato;
+
+  @include for-size(min-mobile) {
+    background-color: blue;
+  }
+
+  @include for-size(min-tablet) {
+    background-color: yellow;
+  }
+
+  @include for-size(desktop) {
+    background-color: green;
+  }
 }
