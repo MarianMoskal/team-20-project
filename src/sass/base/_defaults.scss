@@ -43,10 +43,25 @@ button {
 }
 
 .container {
-  min-width: 200px;
-  padding: 0;
+  min-width: 280px;
+  padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
+
+  @include for-size(min-mobile) {
+    max-width: 440px;
+    padding: 0 40px;
+  }
+
+  @include for-size(min-tablet) {
+    max-width: 688px;
+    padding: 0 40px;
+  }
+
+  @include for-size(desktop) {
+    max-width: calc(100vw - 22%);
+    padding: 0;
+  }
 }
 
 // To be continue...
