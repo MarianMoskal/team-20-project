@@ -49,17 +49,18 @@ button {
   margin-right: auto;
 
   @include for-size(min-mobile) {
-    max-width: 440px;
+    max-width: 480px;
     padding: 0 40px;
   }
 
   @include for-size(min-tablet) {
-    max-width: 688px;
+    max-width: 768px;
     padding: 0 40px;
   }
 
   @include for-size(desktop) {
-    max-width: calc(100vw - 22%);
+    width: calc(100vw - 22%);
+    max-width: 1680px;
     padding: 0;
   }
 }
