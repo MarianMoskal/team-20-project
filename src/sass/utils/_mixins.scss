@@ -33,7 +33,7 @@
 // міксин для позиціювання списку елементів у вигляді сітки
 
 @mixin placeItemsGrid($indent) {
-  justify-content: center;
+  justify-content: space-between;
   margin-top: calc(-1 * #{$indent});
   margin-left: calc(-1 * #{$indent});
 }
