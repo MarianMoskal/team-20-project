@@ -8,6 +8,18 @@
   @include for-size(desktop) {
     padding-top: 120px;
     padding-bottom: 164px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 670px;
+      height: 100%;
+      background-image: url('./../images/program/desktop-main.png');
+      background-repeat: no-repeat;
+      background-position: bottom -130px left 64px;
+    }
   }
 }
 

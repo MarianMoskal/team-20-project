@@ -24,13 +24,8 @@
     //padding-top: 100px;
     padding-bottom: 130px;
 
-    background: linear-gradient(
-      to bottom,
-      $main-black 0%,
-      $main-black 40%,
-      $full-white 40%,
-      $full-white 100%
-    );
+    background: url('./../images/program/desktop-main.png') no-repeat top -372px left 64px / 670px auto,
+      linear-gradient(to bottom, $main-black 0%, $main-black 40%, $full-white 40%, $full-white 100%);
   }
 }
 
