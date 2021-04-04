@@ -1,6 +1,7 @@
 .list-with-counter__container {
   background-color: $full-white;
   padding: 20px 30px;
+  z-index: 30;
   box-shadow: $box-shadow;
   @include for-size(min-tablet) {
     padding: 30px 96px;
