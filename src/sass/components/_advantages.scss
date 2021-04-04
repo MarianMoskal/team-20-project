@@ -1,3 +1,67 @@
-.c {
-  background-color: purple;
+.advantages {
+  min-width: 320px;
+  max-width: 480px;
+  padding-top: 30px;
+  padding-bottom: 49.5px;
+}
+
+.advantages__items {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 216px;
+}
+
+.advantages__item {
+  position: relative;
+  display: block;
+  padding-left: 57px;
+
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+
+@each $advantage in female_student, mobile_learning, insurance {
+  .advantages__item--#{$advantage}::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -1;
+    display: block;
+    height: 58.82px;
+    width: 60px;
+    border: 2px solid #ff6b09;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/#{$advantage}.svg);
+    transform: translateY(-50%);
+  }
+}
+
+.advantages__item-desc {
+  position: relative;
+  z-index: 1;
+  display: block;
+  // align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  padding-left: 10px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  line-height: 1.43;
+  color: #3d3d3d;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 10px;
+    height: 40px;
+    transform: translateY(-50%);
+    background-color: white;
+  }
 }

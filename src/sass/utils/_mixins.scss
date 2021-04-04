@@ -29,3 +29,19 @@
 @mixin transition($type) {
   transition: $type $transition-time $cubic-bezier;
 }
+
+// міксин для позиціювання списку елементів у вигляді сітки
+
+@mixin placeItemsGrid($indent) {
+  justify-content: center;
+  margin-top: calc(-1 * #{$indent});
+  margin-left: calc(-1 * #{$indent});
+}
+
+// міксин для позиціювання кожного елементу списку елементів у вигляді сітки
+
+@mixin buildGrid($rowsitems, $indent) {
+  flex-basis: calc(100% / #{$rowsitems} - #{$indent});
+  margin-top: #{$indent};
+  margin-left: #{$indent};
+}
