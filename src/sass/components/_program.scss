@@ -2,6 +2,38 @@
   position: relative;
   background-color: $main-black;
   padding-top: 50px;
+
+  @include for-size(max-tablet) {
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-image: url('./../images/program/mobile-main.png');
+    //   background-repeat: no-repeat;
+    //   background-position: bottom -50px right -70px;
+    //   background-size: 216px 137px;
+    // }
+  }
+
+  @include for-size(min-tablet) {
+    padding-bottom: 189px;
+    padding-top: 120px;
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-image: url('./../images/program/tablet-main.png');
+    //   background-repeat: no-repeat;
+    //   background-position: bottom 50px right 0;
+    //   background-size: 384px 280px;
+    // }
+  }
 }
 
 .program__header {
@@ -10,70 +42,189 @@
   font-size: 20px;
   line-height: 130%;
   margin-bottom: 43px;
+
+  @include for-size(min-tablet) {
+    text-align: left;
+    font-size: 26px;
+    margin-bottom: 60px;
+  }
+  @include for-size(desktop) {
+    font-size: 46px;
+    margin-bottom: 100px;
+  }
 }
 // * {
 //   outline: 1px solid greenyellow;
 // }
 
 .semester-list {
+  counter-reset: cnt;
+
   color: $full-white;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  padding-left: 80px;
 
-  margin-left: 26px;
+  @include for-size(min-tablet) {
+    padding-left: 90px;
+  }
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-top: 60px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 277px;
+      width: 100vw;
+      height: 1px;
+      //background-color: $full-white;
+      border-top: 1px solid $full-white;
+    }
+  }
 }
 .semester-list__item {
   position: relative;
-  padding-bottom: 40px;
 
-  &:not(:last-child)::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 14px;
-    left: -1px;
-    border-left: 1px solid $full-white;
+  @include for-size(max-tablet) {
+    padding-bottom: 40px;
+    &:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      top: 6px;
+      left: -26px;
+      border-left: 1px solid $full-white;
+    }
+
+    &::after {
+      content: '';
+      @include for-size(max-tablet) {
+        display: flex;
+        position: absolute;
+        top: 6px;
+        left: -26px - 6px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $main-orange;
+        z-index: 1;
+      }
+      @include for-size(min-tablet) {
+        margin-right: 50px;
+      }
+    }
+  }
+
+  @include for-size(desktop) {
+    flex-basis: calc(100% / 5);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -60px - 9px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $main-orange;
+    }
   }
 }
 
 .semester-list__header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  display: list-item;
+  counter-increment: cnt;
+  &::marker {
+    content: counter(cnt) ' ';
+    @include for-size(desktop) {
+      font-size: 30px;
+    }
+  }
+  margin-left: 14px;
 
+  letter-spacing: 0.08em;
   line-height: 173%;
   margin-bottom: 5px;
-  &::before {
-    content: '';
-    margin-right: 32px;
-    margin-left: -7px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: $main-orange;
-    z-index: 1;
+
+  @include for-size(desktop) {
+    font-size: 20px;
+    line-height: 95%;
+    margin-bottom: 25px;
+    margin-left: 27px;
   }
 }
+
 .theme-list {
   color: $main-orange;
   font-size: 12px;
-  margin-left: 38px;
+  //margin-left: 25px;
   line-height: 257%;
   letter-spacing: 0.08em;
+
+  @include for-size(min-tablet) {
+    display: flex;
+  }
+  @media screen and (min-width: $desktop-screen) and (max-width: 1556px) {
+    display: block;
+    font-size: 1.19vw;
+  }
+
+  @media screen and (min-width: 1556px) {
+    display: block;
+    font-size: 20px;
+  }
+}
+.theme-list__header {
+  &::before {
+    content: '—' ' ';
+  }
+}
+
+.theme-list__item {
+  @include for-size(min-tablet) {
+    //flex-basis: calc(100% / 3 - 50px);
+    &:first-child {
+      flex-basis: 176px;
+    }
+
+    &:nth-child(2) {
+      flex-basis: 155px;
+    }
+
+    &:last-child {
+      flex-basis: 110px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 }
 
 .lessons-list {
   color: $main-grey;
+  opacity: 0.5;
   font-size: 12px;
   font-weight: 500;
   padding-bottom: 8px;
   line-height: 1.666;
-}
 
-.program__thumb {
-  position: absolute;
-  right: 0;
-  bottom: -47px;
-  z-index: 1;
+  @media screen and (min-width: $desktop-screen) and (max-width: 1556px) {
+    line-height: 1.555;
+    font-size: 1.0714vw;
+  }
+
+  @media screen and (min-width: 1556px) {
+    font-size: 18px;
+    line-height: 1.555;
+  }
+  // @include for-size(desktop) {
+  //   font-size: 18px;
+  //   line-height: 1.555;
+  // }
 }
