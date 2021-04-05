@@ -86,3 +86,9 @@
   text-decoration-line: underline;
   color: $main-orange;
 }
+
+.about__flex {
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
