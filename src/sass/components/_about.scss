@@ -1,3 +1,88 @@
-.h {
-  background-color: olive;
+.about {
+  max-width: 480px;
+}
+.about__heading {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  color: $main-black;
+  margin-bottom: 20px;
+}
+
+.about__photo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.about__name {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  color: $main-black;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $main-grey;
+  margin-bottom: 20px;
+}
+
+.about__skills {
+  position: relative;
+  padding-bottom: 23px;
+  margin-bottom: 23px;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: $main-orange;
+  }
+}
+
+.about__skills-item {
+  position: relative;
+  margin-left: 26px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.06em;
+  &:not(:last-child) {
+    margin-bottom: 23px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 0;
+    display: block;
+    height: 14px;
+    width: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/check.svg);
+  }
+}
+
+.about__text {
+  font-size: 12px;
+  line-height: 1.67;
+  color: $main-grey;
+
+  & + .about__text {
+    margin-top: 23px;
+  }
+}
+
+.about__link {
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  font-size: 12px;
+  line-height: 1.67;
+  text-decoration-line: underline;
+  color: $main-orange;
 }
