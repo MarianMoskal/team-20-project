@@ -12,10 +12,14 @@
 
   @media (min-width: 768px) {
     width: 688px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media (min-width: 1280px) {
-    width: 1314px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
     margin-bottom: 130px;
   }
 }
@@ -90,13 +94,12 @@
   padding: 30px 20px;
   background-color: $guarantee-bg;
   @media (min-width: 768px) {
-    margin-left: 40px;
-    margin-right: 40px;
     padding: 30px 79px;
   }
   @media (min-width: 1280px) {
-    margin-left: 128px;
-    margin-right: 128px;
+    max-width: 1314px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 50px 112px;
   }
 }
