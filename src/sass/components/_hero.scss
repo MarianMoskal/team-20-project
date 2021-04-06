@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
   height: 550px;
-  padding-top: 59.6px;
+  padding-top: 50.47px;
   padding-bottom: 47px;
   box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
   background-image: url(../images/vector.jpg);
@@ -97,6 +97,7 @@
 
 .hero__container {
   text-align: center;
+  margin-bottom: 30px;
 
   @include for-size(min-tablet) {
     text-align: left;
@@ -104,8 +105,7 @@
 }
 
 .hero__btn {
-  display: inline-block;
-  margin-bottom: 30px;
+  display: inline-block;  
   background-color: $main-orange;
   padding: 14px 10px;
 
