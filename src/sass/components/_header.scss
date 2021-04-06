@@ -118,7 +118,8 @@
   display: block;
   margin-left: auto;
   align-items: center;
-  background-color: black;
+  background-color: inherit;
+  fill: inherit;
 
   @include for-size(min-tablet) {
     margin-left: 0px;
@@ -133,11 +134,6 @@
 .menu-toggle:hover {
   fill: $main-orange;
   outline: none;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.menu-toggle > .menu-toggle__icon:focus,
-.menu-toggle > .menu-toggle__icon:hover {
-  fill: $main-orange;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(fill);
 }
