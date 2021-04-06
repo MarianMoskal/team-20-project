@@ -4,7 +4,6 @@
   position: relative;
   background-color: $main-black;
   padding-top: 50px;
-  //z-index: -2;
 
   @include for-size(min-tablet) {
     max-width: 768px;
@@ -14,6 +13,7 @@
 
   @include for-size(desktop) {
     max-width: 1680px;
+    padding-top: 120px;
   }
 }
 
@@ -23,6 +23,7 @@
   @media screen and (max-width: $desktop-screen - 1) {
     position: relative;
   }
+
   &::after {
     content: '';
     position: absolute;
@@ -31,17 +32,19 @@
     @media screen and (max-width: $min-mobile-screen - 1) {
       bottom: -50px;
       left: 180px;
-      width: 215px;
+      width: 140px;
+      max-width: 215px;
       height: 137px;
       background-image: url('./../images/program/mobile-main.jpg');
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-size: cover;
+
       @media ($min-pixel-ratio),
         (min-resolution: $min-resolution-dpi),
         (min-resolution: $min-resolution-dppx) {
         background-image: url('./../images/program/mobile-main@2x.jpg');
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: cover;
       }
     }
     @media screen and (min-width: $min-mobile-screen) and (max-width: $min-tablet-screen) {
@@ -51,14 +54,14 @@
       height: 137px;
       background-image: url('./../images/program/mobile-main.jpg');
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-size: cover;
 
       @media ($min-pixel-ratio),
         (min-resolution: $min-resolution-dpi),
         (min-resolution: $min-resolution-dppx) {
         background-image: url('./../images/program/mobile-main@2x.jpg');
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: cover;
       }
     }
     @include for-size(min-tablet) {
