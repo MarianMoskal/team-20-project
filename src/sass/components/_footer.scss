@@ -46,6 +46,10 @@
   width: 84.12px;
   height: 30px;
 
+  @include for-size(max-mobile) {
+    margin-bottom: 20px;
+  }
+
   @include for-size(min-tablet) {
     display: inline-block;
     margin: 0;
@@ -57,10 +61,7 @@
   background-repeat: no-repeat;
 }
 
-.footer__items {
-  @include for-size(max-mobile) {
-    margin-top: 20px;
-  }
+.footer__items {  
 
   @include for-size(min-tablet) {
     display: inline-block;
@@ -68,9 +69,15 @@
 }
 
 .footer__item {
+  &:not(:last-child){
+    @include for-size(max-mobile) {
+      margin-bottom: 30px;
+    }
+  }  
+
   @include for-size(min-tablet) {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: middle;    
   }
 }
 
@@ -105,9 +112,9 @@
   }
 
   &--tel {
-    @include for-size(max-mobile) {
-      margin-bottom: 30px;
-    }
+    // @include for-size(max-mobile) {
+    //   margin-bottom: 30px;
+    // }
 
     display: flex;
     vertical-align: baseline;
