@@ -7,37 +7,40 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
+
+  @include for-size(desktop) {
+    padding-top: 96.5px;
+    padding-bottom: 130px;
+  }
 }
 
 .advantages__items {
-  list-style: none;
-  margin: 0 auto;
+  padding-left: 35px; //компенсуємо половину ширини псевдоелементу 61 і відступ 10
 
   @include for-size(min-tablet) {
     display: flex;
     width: 100%;
-    @include placeItemsGrid(21px);
+    padding-left: 0;
+    @include placeItemsGrid(95px);
+    margin-left: 0;
   }
 
   @include for-size(desktop) {
     display: flex;
     width: 100%;
-    @include placeItemsGrid(0);
+    padding: 0;
+    @include placeItemsGrid(82px);
+    margin-left: 0;
   }
 }
 
 .advantages__item {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   @include for-size(min-tablet) {
-    @include buildGrid(3, 21px);
+    @include buildGrid(3, 95px);
   }
 
   @include for-size(desktop) {
-    @include buildGrid(3, 0);
+    @include buildGrid(3, 82px);
   }
 
   @include for-size(max-mobile) {
@@ -47,44 +50,10 @@
   }
 }
 
-.advantages__thumb {
-  margin-right: 22px;
-  position: relative;
-  z-index: 3;
-
-  @include for-size(desktop) {
-    margin-right: 13px;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -22px;
-    display: block;
-    width: 22px;
-
-    @include for-size(desktop) {
-      right: -13px;
-      width: 13px;
-    }
-
-    height: 100%;
-    background-color: $full-white;
-  }
-}
-
 .advantages__item-desc {
   position: relative;
-  opacity: 1;
-  z-index: 1;
-  display: block;
+  margin: 0 auto;
   width: 146px;
-
-  @include for-size(desktop) {
-    width: 366px;
-    z-index: 4;
-  }
 
   font-weight: 700;
   font-size: 14px;
@@ -92,30 +61,42 @@
   letter-spacing: 0.08em;
 
   @include for-size(desktop) {
+    margin: 0;
+    width: 366px;
+    z-index: 4;
     font-size: 20px;
     line-height: 164.9%;
   }
 
   color: $main-black;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: -70px;
-    top: 50%;
-    z-index: 1;
-    display: block;
-    height: 58.82px;
-    width: 60px;
+@each $advantage in rectangle_female_student, rectangle_mobile_learning, rectangle__insurance {
+  .icon--#{$advantage} {
+    &::before {
+      content: '';
+      position: absolute;
+      left: -71px;
+      top: 50%;
+      display: block;
+      height: 63px;
+      width: 61px;
+      transform: translateY(-50%);
+      background-image: url('../images/#{$advantage}.svg');
 
-    @include for-size(desktop) {
-      left: -80px;
-      height: 102px;
-      width: 100px;
+      @include for-size(min-tablet) {
+        left: -78px;
+      }
+
+      @include for-size(desktop) {
+        left: -80px;
+        height: 105px;
+        width: 102px;
+        background-repeat: no-repeat;
+        background-image: url('../images/#{$advantage}_100.svg');
+      }
+      background-repeat: no-repeat;
     }
-
-    border: 2px solid $main-orange;
-    transform: translateY(-50%);
   }
 }
 
