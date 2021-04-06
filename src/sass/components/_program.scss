@@ -31,7 +31,7 @@
     z-index: 1;
     @media screen and (max-width: $min-mobile-screen - 1) {
       bottom: -50px;
-      left: 180px;
+      right: 0;
       width: 140px;
       max-width: 215px;
       height: 137px;
@@ -49,7 +49,7 @@
     }
     @media screen and (min-width: $min-mobile-screen) and (max-width: $min-tablet-screen) {
       bottom: -50px;
-      left: 218px;
+      right: 0;
       width: 215px;
       height: 137px;
       background-image: url('./../images/program/mobile-main.jpg');
