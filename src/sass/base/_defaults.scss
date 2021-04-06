@@ -49,37 +49,42 @@ button {
   margin-right: auto;
 
   @include for-size(min-mobile) {
-    max-width: 440px;
+    max-width: 480px;
     padding: 0 40px;
   }
 
   @include for-size(min-tablet) {
-    max-width: 688px;
+    max-width: 768px;
     padding: 0 40px;
   }
 
   @include for-size(desktop) {
-    max-width: calc(100vw - 22%);
+    width: calc(100vw - 22%);
+    max-width: 1680px;
     padding: 0;
   }
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 //this block for contacts section
-input:-moz-placeholder{ 
+input::placeholder{ 
   font-weight: 600;
   font-size: 14px;
   line-height: 1.22;
   letter-spacing: 0.08em;
   color: $full-white; 
-}
-
-//this block for contacts section
-input::-webkit-input-placeholder{
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.22;
-  letter-spacing: 0.08em;
-  color: $full-white;  
 }
 
 // To be continue...
