@@ -1,11 +1,10 @@
 .problems {
-  margin: 0 auto;
   position: relative;
   top: -1px;
   height: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-  max-width: 480px;
+
   background: linear-gradient(
     to bottom,
     $main-black 0%,
@@ -15,8 +14,6 @@
   );
 
   @include for-size(min-tablet) {
-    max-width: 768px;
-
     background: linear-gradient(
       to bottom,
       $main-black 0%,
@@ -27,7 +24,6 @@
   }
 
   @include for-size(desktop) {
-    max-width: 1680px;
     padding-top: 100px;
     padding-bottom: 130px;
 
@@ -50,10 +46,6 @@
       z-index: -1;
     }
   }
-}
-
-.problems--container {
-  max-width: 1314px;
 }
 
 .problems__header {
