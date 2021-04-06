@@ -3,34 +3,32 @@
 }
 
 .menu-container {
-  width: 320px;
-  height: 568px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+
+  min-width: 100vw;
+  min-height: 100vh;
   padding-left: 20px;
   padding-right: 20px;
   background-color: rgba(17, 21, 24, 0.9);
   background-image: linear-gradient(to right, rgba(17, 21, 24, 0.9), rgba(17, 21, 24, 0.9));
 
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
   @include for-size(min-tablet) {
-    width: 768px;
-    height: 1024px;
     padding-left: 40px;
     padding-right: 40px;
   }
-
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // height: 100%;
-  // z-index: 5;
-
-  // transform: translateX(100%);
-  // transition: transform 250ms ease-in-out;
 }
 
-// .menu-container.is-open {
-//   transform: translateX(0);
-// }
+.menu-container.is-open {
+  transform: translateX(0);
+}
 
 .mobile-header {
   justify-content: space-between;
@@ -84,12 +82,14 @@
     display: none;
   }
 }
-.menu-close:hover,
-.menu-close:focus {
-  fill: $main-orange;
-  outline: none;
-}
-.menu-close > .menu-close__icon:hover,
-.menu-close > .menu-close__icon:focus {
-  fill: $main-orange;
-}
+
+// .menu-close:hover,
+// .menu-close:focus {
+//   fill: $main-orange;
+//   outline: none;
+// }
+
+// .menu-close > .menu-close__icon:hover,
+// .menu-close > .menu-close__icon:focus {
+//   fill: $main-orange;
+// }

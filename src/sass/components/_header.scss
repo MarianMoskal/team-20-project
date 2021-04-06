@@ -2,18 +2,19 @@
 // 3. додати іконку мобільного меню
 .page-header {
   padding-top: 30.5px;
-  margin-bottom: 50.47px;
+  // margin-bottom: 50.47px;
 
   @include for-size(min-tablet) {
     padding-top: 40px;
-    margin-bottom: 70px;
+    // margin-bottom: 70px;
   }
 
   @include for-size(desktop) {
     padding-top: 27px;
-    margin-bottom: 36px;
+    // margin-bottom: 36px;
   }
 }
+
 .page-header__container {
   display: flex;
   align-items: center;
