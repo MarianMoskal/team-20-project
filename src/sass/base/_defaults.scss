@@ -78,4 +78,13 @@ button {
   overflow: hidden;
 }
 
+//this block for contacts section
+input::placeholder{ 
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.22;
+  letter-spacing: 0.08em;
+  color: $full-white; 
+}
+
 // To be continue...
