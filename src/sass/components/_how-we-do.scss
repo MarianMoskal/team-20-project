@@ -1,4 +1,7 @@
 .feature {
+  margin-left: auto;
+  margin-right: auto;
+
   &__title {
     text-align: center;
     margin-bottom: 30px;
@@ -11,12 +14,32 @@
 }
 
 .feature-list {
+  &__link:focus,
+  &__link:hover {
+    background-color: $main-orange;
+  }
+
+  &__link:hover &__title,
+  &__link:hover &__text,
+  &__link:focus &__text,
+  &__link:focus &__title,
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: $full-white;
+    color: $full-white;
+  }
+
   &__item {
     box-shadow: $box-shadow;
     background-color: $full-white;
     margin-bottom: 15px;
     width: 280px;
     // height: 280px;
+  }
+
+  &__item:hover,
+  &__item:focus {
+    background-color: $main-orange;
   }
 
   &__box {
@@ -55,8 +78,13 @@
     transform: translate(10px);
   }
 
+  &__link:focus &__title::after,
+  &__link:hover &__title::after {
+    background-color: $full-white;
+  }
+
   &__text {
-    margin-top: 14px;
+    padding-top: 14px;
     font-size: 12px;
     line-height: 1.6;
     text-align: center;
