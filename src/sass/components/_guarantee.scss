@@ -16,7 +16,7 @@
     padding-right: 0;
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1380px) {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -31,7 +31,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
-  @media (min-width: 1280px) {
+  @media (min-width: 1380px) {
     font-size: 46px;
     margin-bottom: 50px;
   }
@@ -51,7 +51,7 @@
   padding-left: 28px;
 
   &:not(:last-child) {
-    margin-bottom: 23px;
+    padding-bottom: 23px;
     border-left: 1px dashed $main-grey;
   }
 
@@ -68,7 +68,7 @@
     width: 20px;
     background-color: $guarantee-bg;
     background-image: url(../images/fire.svg);
-    @media (min-width: 1280px) {
+    @media (min-width: 1380px) {
       left: -15px;
       background-size: 22px 30px;
       height: 40px;
@@ -80,7 +80,7 @@
     padding-left: 32px;
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1380px) {
     font-size: 20px;
     padding-left: 40px;
   }
@@ -96,7 +96,7 @@
   @media (min-width: 768px) {
     padding: 30px 79px;
   }
-  @media (min-width: 1280px) {
+  @media (min-width: 1380px) {
     max-width: 1314px;
     margin-left: auto;
     margin-right: auto;
