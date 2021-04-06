@@ -6,15 +6,15 @@
   text-transform: uppercase;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(255, 107, 9, 1);
+  color: $full-white;
+  background-color: $main-orange;
 
   width: 260px;
   height: 48px;
   border: none;
   padding: 0px;
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 0.14em;
