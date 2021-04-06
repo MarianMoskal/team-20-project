@@ -1,11 +1,18 @@
 .contacts {
   background-image: url('../images/contacts/contacts-background@1x.png'),
-    url('../images/contacts/contacts-background-black.png');
+    url('../images/contacts/contacts-background-black@1x.png');
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (min-device-pixel-ratio: $min-pixel-ratio),
+    (min-resolution: $min-resolution-dpi),
+    (min-resolution: $min-resolution-dppx) {
+    background-image: url('../images/contacts/contacts-background@2x.png'),
+    url('../images/contacts/contacts-background-black@2x.png');
+  }
 }
 
 .container__contacts{
