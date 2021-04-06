@@ -1,23 +1,25 @@
-$main-orange: rgba(255, 107, 9, 1);                   //all orange color
-$main-black: rgba(17, 21, 24, 1);                     //all black color beside flame and text in warranty
-$main-grey: rgba(185, 185, 185, 1);                   //all grey color
-$full-white: rgba(255, 255, 255, 1);                  //white color
-$secondary-black-color: rgba(61, 61, 61, 1);          //flames in problems section and text in warranty colors
-$guarantee-bg: rgba(241, 241, 241, 1);                //guarantee background color
+$main-orange: rgba(255, 107, 9, 1); //all orange color
+$main-black: rgba(17, 21, 24, 1); //all black color beside flame and text in warranty
+$main-grey: rgba(185, 185, 185, 1); //all grey color
+$full-white: rgba(255, 255, 255, 1); //white color
 
-$box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);       //box-shadow in problems and benefits
-$box-shadow-cards: 0px 8px 26px rgba(0, 0, 0, 0.1);   //box-shadow in how we do cards
+$secondary-black-color: rgba(61, 61, 61, 1);
+//flames in problems section and text in warranty colors
 
-$min-mobile-screen: 480px;                              //min mobile resolution
-$max-mobile-screen: 767px;                              //max mobile resolution
-$min-tablet-screen: 768px;                              //min tablet resolution
-$max-tablet-screen: 1279px;                             //max tablet resolution
-$desktop-screen: 1280px;                                //desktop resolution
+$guarantee-bg: rgba(241, 241, 241, 1); //guarantee background color
 
-$transition-time: 250ms;                                //transition time
-$cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);            //cubic-bezier
+$box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04); //box-shadow in problems and benefits
+$box-shadow-cards: 0px 8px 26px rgba(0, 0, 0, 0.1); //box-shadow in how we do cards
 
-$min-pixel-ratio: 2;                                    //min device pixel ratio
-$min-resolution-dpi: 192dpi;                            //min resolution (dpi)
-$min-resolution-dppx: 2dppx;                            //min resolution (dppx)
+$min-mobile-screen: 480px; //min mobile resolution
+$max-mobile-screen: 767px; //max mobile resolution
+$min-tablet-screen: 768px; //min tablet resolution
+$max-tablet-screen: 1379px; //max tablet resolution
+$desktop-screen: 1380px; //desktop resolution
 
+$transition-time: 250ms; //transition time
+$cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1); //cubic-bezier
+
+$min-pixel-ratio: 2; //min device pixel ratio
+$min-resolution-dpi: 192dpi; //min resolution (dpi)
+$min-resolution-dppx: 2dppx; //min resolution (dppx)
