@@ -14,7 +14,7 @@
   min-height: 100vh;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: rgba(17, 21, 24, 0.9);
+  // background-color: rgba(17, 21, 24, 0.9);
   background-image: linear-gradient(to right, rgba(17, 21, 24, 0.9), rgba(17, 21, 24, 0.9));
 
   transform: translateX(100%);
@@ -34,6 +34,7 @@
   justify-content: space-between;
   display: flex;
   padding-top: 30px;
+
   @include for-size(min-tablet) {
     margin-bottom: 72px;
     padding-top: 42px;
