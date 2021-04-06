@@ -64,4 +64,22 @@ button {
   }
 }
 
+//this block for contacts section
+input:-moz-placeholder{ 
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.22;
+  letter-spacing: 0.08em;
+  color: $full-white; 
+}
+
+//this block for contacts section
+input::-webkit-input-placeholder{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.22;
+  letter-spacing: 0.08em;
+  color: $full-white;  
+}
+
 // To be continue...
