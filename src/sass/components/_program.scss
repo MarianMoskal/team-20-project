@@ -156,7 +156,7 @@
   position: relative;
 
   @include for-size(max-tablet) {
-    margin-bottom: 40px;
+    padding-bottom: 40px;
     &:not(:last-child)::before {
       content: '';
       position: absolute;
