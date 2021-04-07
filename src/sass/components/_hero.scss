@@ -12,10 +12,10 @@
 
   @include for-size(min-tablet) {
     background-image: url(../images/tabletvector.jpg);
-    background-size: 100% 500px;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
-    height: auto;
+    height: 440px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/tabletherox2.png), url(../images/tabletvectorx2.jpg);
@@ -165,5 +165,14 @@
     to {
       left: 0px;
     }
+  }
+}
+
+.btn.btn__hero {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  @include for-size(min-tablet) {
+    margin: 0;
   }
 }
