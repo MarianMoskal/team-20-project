@@ -82,7 +82,7 @@
       height: 63px;
       width: 61px;
       transform: translateY(-50%);
-      background-image: url('../images/#{$advantage}.svg');
+      background-image: url('../images/advantages-icon/#{$advantage}.svg');
 
       @include for-size(min-tablet) {
         left: -78px;
@@ -93,7 +93,7 @@
         height: 105px;
         width: 102px;
         background-repeat: no-repeat;
-        background-image: url('../images/#{$advantage}_100.svg');
+        background-image: url('../images/advantages-icon/#{$advantage}_100.svg');
       }
       background-repeat: no-repeat;
     }

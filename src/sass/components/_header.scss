@@ -47,17 +47,17 @@
   @include for-size(desktop) {
     display: flex;
 
-    &__item {
+    &__item:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    &__link {
       font-weight: bold;
       font-size: 14px;
       line-height: 17px;
       text-transform: uppercase;
 
       color: $main-grey;
-
-      &:not(:last-child) {
-        margin-right: 40px;
-      }
     }
 
     &__link:hover,
@@ -109,7 +109,6 @@
 
 .menu-toggle {
   display: block;
-  margin-left: auto;
   align-items: center;
   background-color: inherit;
   fill: inherit;
