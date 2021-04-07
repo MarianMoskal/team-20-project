@@ -2,7 +2,6 @@
   width: 100%;
   height: 550px;
   padding-top: 50.47px;
-  padding-bottom: 47px;
   background-image: url(../images/vector.jpg);
   background-size: 100% 100%;
   background-position: center;
@@ -12,10 +11,10 @@
   }
 
   @include for-size(min-tablet) {
-    background-image: url(../images/tablethero.png), url(../images/tabletvector.jpg);
-    background-size: 375.75px, 100% 500px;
+    background-image: url(../images/tabletvector.jpg);
+    background-size: 100% 500px;
     background-repeat: no-repeat;
-    background-position: top 83.44px right 18.25px, center;
+    background-position: center;
     height: auto;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -24,12 +23,48 @@
   }
 
   @include for-size(desktop) {
-    padding-top: 138px;
-    padding-bottom: 144.5px;
-    background-image: url(../images/desctophero.png), url(../images/desctopvector.jpg);
-    background-size: 841px, cover;
+    background-image: url(../images/desctopvector.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center right 45px, center;
+    background-position: center;
+    height: 690px;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/desctopherox2.png), url(../images/desctopvectorx2.jpg);
+    }
+  }
+}
+
+.container.container--absolute {
+  position: relative;
+  @include for-size(desktop) {
+    padding-top: 51px;
+  }
+}
+
+.background {
+  position: absolute;
+
+  @include for-size(min-tablet) {
+    background-image: url(../images/tablethero.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 321px;
+    width: 375.75px;
+    right: 40px;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/tabletherox2.png);
+    }
+  }
+
+  @include for-size(desktop) {
+    background-image: url(../images/desctophero.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: right;
+    top: 0;
+    height: 630px;
+    width: 680px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/desctopherox2.png), url(../images/desctopvectorx2.jpg);
@@ -100,34 +135,6 @@
 
   @include for-size(min-tablet) {
     text-align: left;
-  }
-}
-
-.hero__btn {
-  display: inline-block;
-  background-color: $main-orange;
-  padding: 14px 10px;
-
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.25;
-  color: $full-white;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-
-  &:hover,
-  &:focus {
-    cursor: pointer;
-  }
-
-  @include for-size(min-tablet) {
-    margin-bottom: 0;
-  }
-
-  @include for-size(desktop) {
-    font-size: 14px;
-    line-height: 1.214;
-    padding: 27px 25px;
   }
 }
 
