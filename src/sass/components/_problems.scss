@@ -58,18 +58,18 @@
   color: $full-white;
   font-weight: 800;
   font-size: 20px;
-  line-height: 136%;
+  line-height: 1.36;
   margin-bottom: 27px;
   letter-spacing: 0.03em;
 
   @include for-size(min-tablet) {
     font-size: 26px;
-    line-height: 130%;
+    line-height: 1.3;
     margin-bottom: 25px;
   }
   @include for-size(desktop) {
     font-size: 46px;
-    line-height: 130%;
+    line-height: 1.3;
     margin-bottom: 70px;
   }
 }
