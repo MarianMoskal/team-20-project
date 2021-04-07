@@ -32,7 +32,9 @@
     height: 690px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/hero/desctopherox2.png), url(../images/hero/desctopvectorx2.jpg);
+      background-image: url(../images/hero/desctopherox2.png),
+        url(../images/hero/desctopvectorx2.jpg);
+
     }
   }
 }
