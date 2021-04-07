@@ -63,8 +63,8 @@ button {
   }
 
   @include for-size(desktop) {
-    width: calc(100vw - 22%);
-    max-width: 1680px;
+    // width: calc(100vw - 20%);
+    max-width: 1314px;
     padding: 0;
   }
 }
