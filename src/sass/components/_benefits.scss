@@ -1,5 +1,5 @@
 .benefits {
-  max-width: 480px;
+  //max-width: 480px;
   margin: 0 auto;
   position: relative;
   top: -1px;
@@ -13,7 +13,6 @@
     $full-white 100%
   );
   @include for-size(min-tablet) {
-    max-width: 768px;
     padding-bottom: 50px;
     background: linear-gradient(
       to bottom,
@@ -24,7 +23,6 @@
     );
   }
   @include for-size(desktop) {
-    max-width: 1680px;
     //padding-top: 100px;
     padding-bottom: 130px;
 
@@ -36,9 +34,6 @@
       $full-white 100%
     );
   }
-}
-.benefit--container {
-  max-width: 1314px;
 }
 
 .benefits__header {

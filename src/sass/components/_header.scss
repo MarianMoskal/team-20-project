@@ -19,7 +19,7 @@
   }
 
   @include for-size(desktop) {
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 }
 
@@ -30,8 +30,7 @@
   }
 
   @include for-size(desktop) {
-    margin-right: auto;
-    margin-left: 0px;
+    margin: 0px;
   }
 
   &:hover,
@@ -96,8 +95,7 @@
     line-height: 17px;
     letter-spacing: 0.14em;
 
-    margin-left: 60px;
-    margin-right: 0px;
+    margin: 0px;
     width: 336px;
     height: 70px;
   }

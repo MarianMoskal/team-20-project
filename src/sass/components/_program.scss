@@ -1,27 +1,41 @@
 .program {
-  max-width: 480px;
   margin: 0 auto;
   position: relative;
   background-color: $main-black;
   padding-top: 50px;
 
   @include for-size(min-tablet) {
-    max-width: 768px;
     padding-bottom: 150px;
     padding-top: 120px;
   }
 
   @include for-size(desktop) {
-    max-width: 1680px;
     padding-top: 120px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 277px;
+      width: 100vw;
+      height: 1px;
+      //background-color: $full-white;
+      border-top: 1px solid $full-white;
+    }
   }
 }
 
-.program--container {
-  max-width: 1314px;
+.program__container {
+  position: relative;
+  @include for-size(min-mobile) {
+    max-width: $min-mobile-screen;
+  }
 
-  @media screen and (max-width: $desktop-screen - 1) {
-    position: relative;
+  @include for-size(min-tablet) {
+    max-width: $min-tablet-screen;
+  }
+
+  @include for-size(desktop) {
+    max-width: 1680px;
   }
 
   &::after {
@@ -29,9 +43,10 @@
     position: absolute;
     opacity: 0.5;
     z-index: 1;
-    @media screen and (max-width: $min-mobile-screen - 1) {
+    // Mobile
+    @include for-size(max-mobile) {
       bottom: -50px;
-      right: 0;
+      right: -20px;
       width: 140px;
       max-width: 215px;
       height: 137px;
@@ -47,10 +62,12 @@
         background-size: cover;
       }
     }
-    @media screen and (min-width: $min-mobile-screen) and (max-width: $min-tablet-screen) {
+    // between mobile and tablet
+    @media (min-width: $min-mobile-screen) and (max-width: $min-tablet-screen) {
       bottom: -50px;
-      right: 0;
-      width: 215px;
+      right: -40px;
+      width: 250px;
+      max-width: 215px;
       height: 137px;
       background-image: url('./../images/program/mobile-main.jpg');
       background-repeat: no-repeat;
@@ -64,27 +81,27 @@
         background-size: cover;
       }
     }
+    // tablet
     @include for-size(min-tablet) {
       bottom: -100px;
-      right: 0;
+      right: -40px;
       width: 384px;
       height: 280px;
       background-image: url('./../images/program/tablet-main.jpg');
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-size: cover;
       @media ($min-pixel-ratio),
         (min-resolution: $min-resolution-dpi),
         (min-resolution: $min-resolution-dppx) {
         background-image: url('./../images/program/tablet-main@2x.jpg');
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: cover;
       }
     }
-
     @include for-size(desktop) {
-      bottom: -140px;
-      left: 0px;
-      width: 40.11vw; // 674px;
+      bottom: -320px;
+      left: -183px;
+      width: 660px;
       max-width: 674px;
       height: 100%;
       max-height: 502px;
@@ -119,9 +136,6 @@
     margin-bottom: 100px;
   }
 }
-// * {
-//   outline: 1px solid greenyellow;
-// }
 
 .semester-list {
   counter-reset: cnt;
@@ -140,16 +154,6 @@
     justify-content: space-between;
     padding-left: 0;
     padding-top: 60px;
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 277px;
-      width: 100vw;
-      height: 1px;
-      //background-color: $full-white;
-      border-top: 1px solid $full-white;
-    }
   }
 }
 .semester-list__item {
