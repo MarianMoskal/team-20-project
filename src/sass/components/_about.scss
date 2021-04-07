@@ -123,10 +123,10 @@
   }
 }
 
-.about__text-container{
+.about__text-container {
   margin-bottom: 15px;
 
-  @media (min-width: 1280px) {    
+  @media (min-width: 1280px) {
     margin-bottom: 20px;
   }
 }
@@ -136,7 +136,7 @@
   line-height: 1.67;
   color: $main-grey;
 
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-bottom: 23px;
   }
 
@@ -151,9 +151,9 @@
     font-size: 18px;
     line-height: 1.55;
 
-    &:not(:last-child){
-    margin-bottom: 28px;
-    }    
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
   }
 }
 

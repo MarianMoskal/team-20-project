@@ -1,17 +1,12 @@
-// 2. добавити іконку в лого
-// 3. додати іконку мобільного меню
 .page-header {
   padding-top: 30.5px;
-  // margin-bottom: 50.47px;
 
   @include for-size(min-tablet) {
     padding-top: 40px;
-    // margin-bottom: 70px;
   }
 
   @include for-size(desktop) {
     padding-top: 27px;
-    // margin-bottom: 36px;
   }
 }
 
@@ -53,17 +48,17 @@
   @include for-size(desktop) {
     display: flex;
 
-    &__item {
+    &__item:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    &__link {
       font-weight: bold;
       font-size: 14px;
       line-height: 17px;
       text-transform: uppercase;
 
       color: $main-grey;
-
-      &:not(:last-child) {
-        margin-right: 40px;
-      }
     }
 
     &__link:hover,
@@ -116,7 +111,6 @@
 
 .menu-toggle {
   display: block;
-  margin-left: auto;
   align-items: center;
   background-color: inherit;
   fill: inherit;

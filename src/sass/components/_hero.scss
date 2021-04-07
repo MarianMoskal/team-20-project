@@ -3,36 +3,37 @@
   height: 550px;
   padding-top: 50.47px;
   padding-bottom: 47px;
-  background-image: url(../images/vector.jpg);
+  background-image: url(../images/hero/vector.jpg);
   background-size: 100% 100%;
   background-position: center;
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url(../images/vectorx2.jpg);
+    background-image: url(../images/hero/vectorx2.jpg);
   }
 
   @include for-size(min-tablet) {
-    background-image: url(../images/tablethero.png), url(../images/tabletvector.jpg);
+    background-image: url(../images/hero/tablethero.png), url(../images/hero/tabletvector.jpg);
     background-size: 375.75px, 100% 500px;
     background-repeat: no-repeat;
     background-position: top 83.44px right 18.25px, center;
     height: auto;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/tabletherox2.png), url(../images/tabletvectorx2.jpg);
+      background-image: url(../images/hero/tabletherox2.png), url(../images/hero/tabletvectorx2.jpg);
     }
   }
 
   @include for-size(desktop) {
     padding-top: 138px;
     padding-bottom: 144.5px;
-    background-image: url(../images/desctophero.png), url(../images/desctopvector.jpg);
+    background-image: url(../images/hero/desctophero.png), url(../images/hero/desctopvector.jpg);
     background-size: 841px, cover;
     background-repeat: no-repeat;
     background-position: center right 45px, center;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/desctopherox2.png), url(../images/desctopvectorx2.jpg);
+      background-image: url(../images/hero/desctopherox2.png),
+        url(../images/hero/desctopvectorx2.jpg);
     }
   }
 }
