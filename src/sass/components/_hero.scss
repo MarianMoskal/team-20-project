@@ -48,19 +48,19 @@
   position: absolute;
 
   @include for-size(min-tablet) {
-    background-image: url(../images/hero/tablethero.png);
+    background-image: url(../images/hero/tablethero.webp);
     background-size: auto;
     background-repeat: no-repeat;
     height: 321px;
     width: 375.75px;
     right: 40px;
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/hero/tabletherox2.png);
+      background-image: url(../images/hero/tabletherox2.webp);
     }
   }
 
   @include for-size(desktop) {
-    background-image: url(../images/hero/desctophero.png);
+    background-image: url(../images/hero/desctophero.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: right;
@@ -69,7 +69,7 @@
     width: 680px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/hero/desctopherox2.png);
+      background-image: url(../images/hero/desctopherox2.webp);
     }
   }
 }
