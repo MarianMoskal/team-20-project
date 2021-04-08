@@ -64,3 +64,21 @@ $(".btn__hero").click(function () {
     }, 500);
     return false;
 });
+
+$(".navigation-list__link").click(function () {
+    var elementClick = $(this).attr("href")
+    var destination = $(elementClick).offset().top;
+    jQuery("html:not(:animated),body:not(:animated)").animate({
+        scrollTop: destination
+    }, 500);
+    return false;
+});
+
+$(".mobile-list__link").click(function () {
+    var elementClick = $(this).attr("href")
+    var destination = $(elementClick).offset().top;
+    jQuery("html:not(:animated),body:not(:animated)").animate({
+        scrollTop: destination
+    }, 500);
+    return false;
+});
