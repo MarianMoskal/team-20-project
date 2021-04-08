@@ -20,7 +20,7 @@
     height: 440px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/hero/tabletherox2.png), url(../images/hero/tabletvectorx2.jpg);
+      background-image: url(../images/hero/tabletvectorx2.jpg);
     }
   }
 
@@ -32,9 +32,7 @@
     height: 690px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/hero/desctopherox2.png),
-        url(../images/hero/desctopvectorx2.jpg);
-
+      background-image: url(../images/hero/desctopvectorx2.jpg);
     }
   }
 }
@@ -71,8 +69,7 @@
     width: 680px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/hero/desctopherox2.png),
-        url(../images/hero/desctopvectorx2.jpg);
+      background-image: url(../images/hero/desctopherox2.png);
     }
   }
 }
