@@ -52,7 +52,7 @@
   }
 
   &:not(:last-child) {
-    @include for-size(max-tablet) {
+    @include for-size(max-mobile) {
       margin-bottom: 10px;
     }
   }
