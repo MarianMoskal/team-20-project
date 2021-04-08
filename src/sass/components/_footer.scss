@@ -1,20 +1,29 @@
 .footer {
-  width: 100%;
+  // width: 100%;
+  padding-top: 30px;
 
-  &--info {
+  @include for-size(min-tablet) {
+    padding-top: 40px;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 55px;
+  }
+
+  &__container {
     margin: 0 auto;
-    padding: 30px 0;
+    padding-bottom: 30px;
 
     @include for-size(min-tablet) {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      padding: 40px 0;
+      padding-bottom: 40px;
     }
 
     @include for-size(desktop) {
       position: relative;
-      padding: 55px 0;
+      padding-bottom: 55px;
     }
   }
 
@@ -33,13 +42,6 @@
 
   @include for-size(min-tablet) {
     margin: 0;
-  }
-
-  @include for-size(desktop) {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
   }
 }
 
