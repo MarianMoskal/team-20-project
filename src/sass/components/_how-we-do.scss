@@ -121,6 +121,8 @@
     }
 
     @include for-size(desktop) {
+      padding-bottom: 16px;
+      margin-bottom: 16px;
       font-size: 20px;
     }
   }
@@ -133,9 +135,17 @@
     width: 20px;
     height: 2px;
     background-color: $main-orange;
-    margin-top: 26px;
+    margin-top: 16px;
     right: 50%;
     transform: translate(10px);
+
+    @include for-size(min-tablet) {
+      margin-top: 26px;
+    }
+
+    @include for-size(desktop) {
+      margin-top: 16px;
+    }
   }
 
   &__link:focus &__title::after,
