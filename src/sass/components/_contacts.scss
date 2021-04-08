@@ -1,6 +1,6 @@
 .contacts {
-  background-image: url('../images/contacts/contacts-background@1x.png'),
-    url('../images/contacts/contacts-background-black@1x.png');
+  background-image: url('../images/contacts/contacts-background@1x.webp'),
+    url('../images/contacts/contacts-background-black@1x.webp');
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
@@ -12,32 +12,32 @@
   @media (min-device-pixel-ratio: $min-pixel-ratio),
     (min-resolution: $min-resolution-dpi),
     (min-resolution: $min-resolution-dppx) {
-    background-image: url('../images/contacts/contacts-background@2x.png'),
-    url('../images/contacts/contacts-background-black@2x.png');
+    background-image: url('../images/contacts/contacts-background@2x.webp'),
+      url('../images/contacts/contacts-background-black@2x.webp');
   }
 
   @include for-size(min-tablet) {
-    background-image: url('../images/contacts/contacts-background-tablet@1x.png'),
-    url('../images/contacts/contacts-background-black-tablet@1x.png');
-  
+    background-image: url('../images/contacts/contacts-background-tablet@1x.webp'),
+      url('../images/contacts/contacts-background-black-tablet@1x.webp');
+
     @media (min-device-pixel-ratio: $min-pixel-ratio),
-    (min-resolution: $min-resolution-dpi),
-    (min-resolution: $min-resolution-dppx) {
-      background-image: url('../images/contacts/contacts-background-tablet@2x.png'),
-      url('../images/contacts/contacts-background-black-tablet@2x.png');
+      (min-resolution: $min-resolution-dpi),
+      (min-resolution: $min-resolution-dppx) {
+      background-image: url('../images/contacts/contacts-background-tablet@2x.webp'),
+        url('../images/contacts/contacts-background-black-tablet@2x.webp');
     }
   }
   @include for-size(desktop) {
-    background-image: url('../images/contacts/contacts-background-desktop@1x.png'),
-    url('../images/contacts/contacts-background-black-desktop@1x.png');
-  
+    background-image: url('../images/contacts/contacts-background-desktop@1x.webp'),
+      url('../images/contacts/contacts-background-black-desktop@1x.webp');
+
     @media (min-device-pixel-ratio: $min-pixel-ratio),
-    (min-resolution: $min-resolution-dpi),
-    (min-resolution: $min-resolution-dppx) {
-      background-image: url('../images/contacts/contacts-background-desktop@2x.png'),
-      url('../images/contacts/contacts-background-black-desktop@2x.png');
+      (min-resolution: $min-resolution-dpi),
+      (min-resolution: $min-resolution-dppx) {
+      background-image: url('../images/contacts/contacts-background-desktop@2x.webp'),
+        url('../images/contacts/contacts-background-black-desktop@2x.webp');
     }
-  }  
+  }
 }
 
 .contacts__header {
@@ -85,11 +85,11 @@
   margin-bottom: 50px;
   max-width: 280px;
 
-  @include for-size(min-tablet){
+  @include for-size(min-tablet) {
     max-width: 390px;
   }
 
-  @include for-size(desktop){
+  @include for-size(desktop) {
     max-width: 478px;
   }
 }
@@ -105,7 +105,7 @@
   width: 100%;
   height: 48px;
 
-  @include for-size(desktop){
+  @include for-size(desktop) {
     height: 70px;
   }
 
