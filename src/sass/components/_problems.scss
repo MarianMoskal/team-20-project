@@ -56,6 +56,7 @@
 
 .problems__header {
   color: $full-white;
+
   font-weight: 800;
   font-size: 20px;
   line-height: 1.36;
@@ -75,14 +76,4 @@
 }
 .problems__accent {
   color: $main-orange;
-}
-
-.problems__hyphenation {
-  display: block;
-}
-
-.problems__hyphenation--tablet-up {
-  @include for-size(min-tablet) {
-    display: inline;
-  }
 }
