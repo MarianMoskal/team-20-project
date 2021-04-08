@@ -75,6 +75,24 @@
   @include for-size(min-tablet){
     height: 150px;
     max-width: 150px;
+
+@each $pic in pic_reviews_1, pic_reviews_2, pic_reviews_3, pic_reviews_4, pic_reviews_5,
+  pic_reviews_6, pic_reviews_7
+{
+  .reviews__thumb--#{$pic} {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/reviews/#{$pic}.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .reviews__thumb--#{$pic} {
+        background-image: url('../images/reviews/#{$pic}@2x.png');
+      }
+    }
   }
 }
 

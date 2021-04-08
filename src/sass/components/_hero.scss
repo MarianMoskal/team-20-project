@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
   height: 550px;
-  padding-top: 50.47px;
+  padding-top: 50px;
 
   background-image: url(../images/hero/vector.jpg);
 
@@ -20,21 +20,19 @@
     height: 440px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/hero/tabletherox2.png), url(../images/hero/tabletvectorx2.jpg);
+      background-image: url(../images/hero/tabletvectorx2.jpg);
     }
   }
 
   @include for-size(desktop) {
     background-image: url(../images/hero/desctopvector.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
     height: 690px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/hero/desctopherox2.png),
-        url(../images/hero/desctopvectorx2.jpg);
-
+      background-image: url(../images/hero/desctopvectorx2.jpg);
     }
   }
 }
@@ -50,19 +48,19 @@
   position: absolute;
 
   @include for-size(min-tablet) {
-    background-image: url(../images/hero/tablethero.png);
-    background-size: auto;
+    background-image: url(../images/hero/tablethero.webp);
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 321px;
     width: 375.75px;
     right: 40px;
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/hero/tabletherox2.png);
+      background-image: url(../images/hero/tabletherox2.webp);
     }
   }
 
   @include for-size(desktop) {
-    background-image: url(../images/hero/desctophero.png);
+    background-image: url(../images/hero/desctophero.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: right;
@@ -71,8 +69,7 @@
     width: 680px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/hero/desctopherox2.png),
-        url(../images/hero/desctopvectorx2.jpg);
+      background-image: url(../images/hero/desctopherox2.webp);
     }
   }
 }

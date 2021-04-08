@@ -13,14 +13,7 @@
 .page-header__container {
   display: flex;
   align-items: center;
-
-  @include for-size(min-tablet) {
-    justify-content: flex-end;
-  }
-
-  @include for-size(desktop) {
-    justify-content: space-between;
-  }
+  justify-content: space-between;
 }
 
 .page-header__container > .logo {
@@ -87,7 +80,7 @@
     display: flex;
 
     margin-right: 40px;
-    margin-left: auto;
+    // margin-left: auto;
   }
 
   @include for-size(desktop) {
@@ -102,7 +95,8 @@
 
   &:hover,
   &:focus {
-    border: 3px solid $main-orange;
+    background-color: $main-orange;
+    color: $full-white;
     outline: none;
   }
 }
@@ -128,4 +122,14 @@
   outline: none;
 
   @include transition(fill);
+}
+
+.logo--header {
+  @include for-size(min-tablet) {
+    margin-right: auto;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 0;
+  }
 }
