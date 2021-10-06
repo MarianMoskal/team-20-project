@@ -5,17 +5,17 @@
     max-width: 100%;
   }
 
-  @media (min-width: 480px) {
-    width: 480px;
+  @media (min-width: $min-mobile-screen) {
+    width: $min-mobile-screen;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $min-tablet-screen) {
     width: 688px;
     padding-left: 0;
     padding-right: 0;
   }
 
-  @media (min-width: 1380px) {
+  @media (min-width: $desktop-screen) {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -29,14 +29,14 @@
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
-  @media (min-width: 1380px) {
+  @media (min-width: $desktop-screen) {
     font-size: 46px;
     margin-bottom: 50px;
   }
 }
 
 .gurantee__set {
-  // max-width: 480px;
+  // max-width: $min-mobile-screen;
   margin-left: auto;
   margin-right: auto;
 }
@@ -66,7 +66,7 @@
     width: 20px;
     background-color: $guarantee-bg;
     background-image: url(../images/fire.svg);
-    @media (min-width: 1380px) {
+    @media (min-width: $desktop-screen) {
       left: -15px;
       background-size: 22px 30px;
       height: 40px;
@@ -74,11 +74,11 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $min-tablet-screen) {
     padding-left: 32px;
   }
 
-  @media (min-width: 1380px) {
+  @media (min-width: $desktop-screen) {
     font-size: 20px;
     padding-left: 40px;
   }
@@ -91,11 +91,11 @@
 .gurantee__container {
   padding: 30px 20px;
   background-color: $guarantee-bg;
-  @media (min-width: 768px) {
+  @media (min-width: $min-tablet-screen) {
     padding: 30px 79px;
   }
-  @media (min-width: 1380px) {
-    max-width: 1314px;
+  @media (min-width: $desktop-screen) {
+    max-width: 1214px;
     margin-left: auto;
     margin-right: auto;
     padding: 50px 112px;
