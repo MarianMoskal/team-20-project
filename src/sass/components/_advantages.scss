@@ -15,35 +15,49 @@
 }
 
 .advantages__items {
-  padding-left: 35px; //компенсуємо половину ширини псевдоелементу 61 і відступ 10
+  // padding-left: 35px; //компенсуємо половину ширини псевдоелементу 61 і відступ 10
+  padding-left: 80px;
+  max-width: 100%;
 
   @include for-size(min-tablet) {
     display: flex;
-    width: 100%;
+    max-width: 100%;
     padding-left: 0;
-    @include placeItemsGrid(95px);
+    // @include placeItemsGrid(95px);
+    margin-top: calc(-1 * 95px);
+    margin-left: calc(-1 * 95px);
     margin-left: 0;
   }
 
   @include for-size(desktop) {
     display: flex;
-    width: 100%;
+    max-width: 100%;
     padding: 0;
-    @include placeItemsGrid(82px);
+    // @include placeItemsGrid(82px);
+    margin-top: calc(-1 * 82px);
+    margin-left: calc(-1 * 82px);
     margin-left: 0;
   }
 }
 
 .advantages__item {
   @include for-size(min-tablet) {
-    @include buildGrid(3, 95px);
+    //   @include buildGrid(3, 95px);
+    // flex-basis: calc(100% / 3 - 95px);
+    margin-top: 95px;
+    margin-left: 95px;
   }
 
   @include for-size(desktop) {
-    @include buildGrid(3, 82px);
+    //   @include buildGrid(3, 82px);
+    margin-top: 82px;
+    margin-left: 82px;
   }
 
   @include for-size(max-mobile) {
+    // margin-left: 70px;
+    width: 146px;
+
     &:not(:last-child) {
       margin-bottom: 30px;
     }
@@ -53,7 +67,7 @@
 .advantages__item-desc {
   position: relative;
   margin: 0 auto;
-  width: 146px;
+  // width: 146px;
 
   font-weight: 700;
   font-size: 14px;
@@ -62,7 +76,7 @@
 
   @include for-size(desktop) {
     margin: 0;
-    width: 366px;
+    // max-width: 366px;
     z-index: 4;
     font-size: 20px;
     line-height: 164.9%;
@@ -73,6 +87,8 @@
 
 @each $advantage in rectangle_female_student, rectangle_mobile_learning, rectangle__insurance {
   .icon--#{$advantage} {
+    // margin-bottom: 30px;
+
     &::before {
       content: '';
       position: absolute;
